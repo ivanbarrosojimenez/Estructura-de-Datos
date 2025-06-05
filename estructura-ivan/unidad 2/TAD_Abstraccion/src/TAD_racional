@@ -1,0 +1,301 @@
+// Un número racional se expresa como: a/b
+// siendo a el numerador y b el denominador
+
+// Construcción o creación
+- construir un numero racional de valor 1
+- construir un numero racional dados un numerador y un denominador
+
+// De acceso
+- definir los métodos get/set de acceso para obtener y modificar los valores del numerador y denominador
+
+// Del TAD
+- suma
+- resta
+- multiplicar
+- dividir
+- inverso
+
+// De E/S
+- representar el numero racional como texto
+- tranformar un texto con formato a/b como un racional (será realmente un constructor)
+
+
+###########################################################
+# TIPO ABSTRACTO DE DATOS - RACIONAL
+###########################################################
+
+###########################################################
+# Los compuestos por dos números enteros a y b, donde b
+# siempre es un número entero positivo y distinto de cero.
+###########################################################
+
+###########################################################
+# OPERACIONES
+###########################################################
+
+###########################################################
+# CONSTRUCTORES
+###########################################################
+
+## Construir un racional de valor 1
+
+Racional()
+
+### El constructor no necesita ningun parametro de entrada,
+pues el valor del raciona ya está definido en su propopia
+definición. Lógicamente la construcción de este objeto no
+generará ninguna exceptición porque siempre se puede contr
+ir un racional 1. Por simplicidad crearmeos un racional
+en el que el denominador y el numerador sea 1.
+
+* Objetivo: Crear un numero racional unidad.
+* Necesita: Nada
+* Modifica: Nada
+* Produce:  Crear un racional cuyo numerador y denominador es 1
+
+
+## Construir un numero racional dados un numerador y un denominador
+
+Racional(int a, int b)
+
+### El constructor  necesita dos parametro de entrada,
+el primero será el numerador y el segundo el denominador
+Por definici de Racion el denominador debe ser un número
+entero positivo, sitinto de cero.  Si no se cumple está
+codinción entonces generar una excepción. pues no existe
+un racional con denominador 0. El caso de que el denominador
+sea negativo es solventable porque existe un racional equivalente
+con el denominador positivo. Para esta modificaicón se utilizar
+un metodo auxiliar privado - simplificar.
+
+
+* Objetivo: Crear un numero racional dados un numerador y un denominador.
+* Necesita: Dos valore enteros, el primero para el númerador y el segundo para el denomiador
+    * Excepción: Si el valor para el denominador vale cero se debe lanzar una excepción "Denominador cero"
+* Modifica: Nada
+* Produce:  Crear un racional cuyos valores se corresponden con los valores dle numerador y denominador dados.
+Si el denomador es negativo, se creará el racional equivalente con el denominador positivo.
+
+
+###########################################################
+# ACCESO
+###########################################################
+
+
+## Devolver valor del numerador
+
+getNumerador()
+
+### El metodo de acceso al nuemrado debe devolver el número entero del numero racional.
+Logicamente este metodo no necesita más que el racional, del cual devolvemos el numerador.
+Esta operacion siempre esp osible para cualquier racional, porlo que no se generan
+excepciones
+
+* Objetivo: devolver el valor del número
+* Necesita: el racional
+* Modifica: Nada
+* Produce:  Devuelve el valor dle numerador del racional dado
+
+
+## Devolver valor del denominador
+
+getDenominador()
+
+### El metodo de acceso al denominador debe devolver el número entero del numero racional.
+Logicamente este metodo no necesita más que el racional, del cual devolvemos el denominador.
+Esta operacion siempre esp osible para cualquier racional, porlo que no se generan
+excepciones
+
+* Objetivo: devolver el valor del número
+* Necesita: el racional
+* Modifica: Nada
+* Produce:  Devuelve el valor dle denominador del racional dado
+
+
+## Modificar el valor del numerador
+
+setNumerador(int a)
+
+### El método de modificación del numerador debe cambiar el valor del numerador
+    del racional por el nuevo valor dado. Lógicamente, este método necesita el
+    racional que hay que modificar y el nuevo valor del numerador. Esta operación
+    siempre es posible para cualquier racional, ya que el numerador puede ser
+    cualquier número entero.
+
+* Objetivo: Modificar el valor del numerador.
+* Necesita: el racional y numero entero
+* Modifica: El racional dado, cambiando el valor de su numerador por el
+            nuevo valor entero dado
+* Produce:  Nada
+
+
+
+
+## Modificar el valor del denominador
+
+setDenominador(int a)
+
+### El método de modificación del denominador debe cambiar el valor del
+   denominador del racional por el nuevo valor dado. Lógicamente, este método
+   necesita el racional que hay que modificar y el nuevo valor del denominador.
+   Esta operación solo es posible si el nuevo valor del denominador es distinto de
+   cero. El caso de que el denominador sea negativo es solventable porque existe un racional equivalente
+   con el denominador positivo. Para esta modificación se utilizar un método auxiliar privado - simplificar.
+
+* Objetivo: Modificar el valor del denominador.
+* Necesita: el racional y numero entero diferente de 0
+    * Excepción: En caso de que el nuevo denominador dado valga cero, se debe lanzar la excepción "Denominador Cero"
+* Modifica: El racional dado, cambiando el valor de su numerador por el
+            nuevo valor entero dado
+* Produce:  Nada
+
+
+
+
+###########################################################
+# DEL TIPO ABSTRACTO DE DATOS
+###########################################################
+
+
+###########################################################
+# SUMA
+###########################################################
+
+La suma es una operación que se aplica sobre dos números racionales,
+por lo que serán necesarios siempre dos números racionales. La
+operación de suma siempre es posible, por lo que el resultado
+será siempre un nuevo número racional.
+
+* Objetivo: Sumar dos números racionales.
+* Necesita: Dos números racionales.
+* Modifica: Nada.
+* Produce: Un nuevo número racional suma de los dos racio-
+nales dados. El nuevo número racional se calcula de la si-
+guiente forma:  El resultado de la operación se
+dará en forma simplificada o canónica.
+
+
+###########################################################
+# RESTA
+###########################################################
+La resta es una operación que se aplica sobre dos números racio-
+nales, por lo que serán necesarios siempre dos números raciona-
+les. La operación de resta siempre es posible, por lo que el resul-
+tado será siempre un nuevo número racional resultado de restar el
+segundo racional del primero
+
+* Objetivo: Restar dos números racionales
+* Necesita: Dos números racionales
+* Modifica: Nada
+* Produce: Un nuevo racional resultado de la resta del segundo número
+           del primero de los dos racionales dados. El nuevo número
+           racional se calculade la siguiente manera: a/b - c/d = (ad - bc)/bd
+
+###########################################################
+# MULTIPLICACIÓN
+###########################################################
+La multiplicación es una operación que se aplica sobre dos núme-
+ros racionales, por lo que serán necesarios siempre dos números
+racionales. La operación de multiplicación siempre es posible, por
+lo que el resultado será siempre un nuevo número racional resul-
+tado de multiplicar el primer racional por el segundo.
+
+* Objetivo: Multiplicar dos números racionales
+* Necesita: Dos números racionales
+* Modifica: Nada
+* Produce: Un nuevo número racional resultado de la multiplicación
+           de los dos racionales dados. El nuevo racional se calcula
+           de la siguiente forma a/b x c/d = ac/bd. El resultado de
+           la operación se dará en forma simplificada o canónica.
+
+###########################################################
+# DIVISIÓN
+###########################################################
+La división es una operación que se aplica sobre dos números ra-
+cionales, por lo que serán necesarios siempre dos números racio-
+nales. La operación de división sólo es posible si el segundo ra-
+cional dado es distinto de cero, es decir, si el numerador del se-
+gundo racional dado es distinto de cero. Si es así, la división es
+realmente la multiplicación del primer racional por el inverso del
+segundo.
+
+0/3 -- Racional valido
+4/0 -- No es un racional valido (indeterminación)
+
+* Objetivo: Dividir dos números racionales
+* Necesita: Dos números racionales
+* Produce: Un nuevo número racional resultado de la división del primer racional
+           entre el segundo. El nuevo número racional se calcula de la siguiente
+           manera:  en primer lugar se calcula el inverso del segundo racional (a/b -> b/a)
+           si el numerador es cero dará un problema siempre que a /= 0
+           Para hacer la división a/b ÷ c/b = a/b * d/c = ad/bc. y este resultado
+           se tendría que simplificar.
+
+
+###########################################################
+# INVERSOR
+###########################################################
+El inverso de un racional se calcula intercambiando el numerador
+con el denominador. Esta operación solo es posible si el numera-
+dor es un valor distinto de cero, pues no existe el racional con el
+denominador cero.
+
+* Objetivo: Calcular el inverso de un racional
+* Necesita: Un números racionales
+        Excepción: Si el numerador del racional vale cero lanza una excepción "denominador cero"
+* Modifica: Nada
+* Produce:  Un nuevo número racional cuyo valor es el inverso del racional dado. Si el racional es
+            a/b --> b/a siempre que a sea distinto de cero.
+
+
+###########################################################
+# SIMPLIFCAR
+###########################################################
+
+Simplificar un racional significa reducir el racional a su forma canónica, es decir
+si un raciona es 6/8 se puede reducir al raciona 3/4. Este racional no se puede
+reducir más pues no exite ningún divisor común del numerador y del denominador que
+permita aplicarse a ambos.
+
+* Objetivo: Calcular la forma canonica de un racional
+* Necesita: Un número racionale
+* Modificare: El número racional. Para ello se calcula el mcd del númerador y del
+              denominador, y se dividen ambos por su mcd. Adicionalmente si el
+              denominador es negativo, se modifica el signo multiplicando el númerador
+              y el denominador por -1.
+ * Produce: Nada.
+
+
+ ###########################################################
+ # CONVERTIR A TEXTO
+ ###########################################################
+Convierte un racional a una representación textual del mismo, de
+forma que se pueda escribir por la pantalla. Se utilizar la represen-
+tación “a/b”, donde a es el numerador del racional y b es el deno-
+minador del racional.
+
+* Objetivo: Convertir un racional en una representación textual del mismo.
+* Necesita: Nada
+* Modifica: Nada
+* Produce: Generae un texto en formato "a/b". donde a es el numerador y b
+           es el denominador. Si el racional es 6/8 genera el texto "3/4"
+
+
+
+###########################################################
+# CONVERTIR DESDE TEXTO
+###########################################################
+Crea un nuevo número racional a partir de una representación textual del
+mismo. Si se utiliza el texto “6/8”, crea el número racional que
+corresponde con 6/8 donde el numerador vale 6 y el denominador vale 8.
+El texto debe estar bien formado y su denominador no debe valer cero.
+
+* Objetivo: Construir un nuevo racional a partir de una representación textual
+            del mismo de la forma "a/b"
+* Necesita: Un texto de un racional
+        Excepciones: Si el texto no tiene la fomra de un entero una barra y otro
+                     entero, debe lanzar una excepción de "Texto mal formado".
+                     Si el texto está bien formado y representa un racional, pero
+                     su denominador vale cero lanza la excepción "Denominador cero".
+* Modifica: Nada
+* Produce: Genera un nuevo racional, que es una representación canónica del racional introducido como texto.
