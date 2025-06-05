@@ -1,0 +1,19 @@
+//SUMA DEFICION DE ABSTRACION POR PARAMETRIZACION TAD
+
+// SUMA de numeros, enteros, naturales, racionales, reales, etc
+
+
+//Suma de valores tipo byte
+public byte suma(byte a, byte b)
+
+//Suma de valores tipo int
+public int suma(int a, int b)
+
+//Suma de valores tipo long
+public long suma(long a, long b)
+
+//Suma de valores tipo float
+public float suma(float a, float b)
+
+//Suma de valores tipo double
+public double suma(byte a, double b)
